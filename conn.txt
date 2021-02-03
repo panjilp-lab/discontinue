@@ -1,0 +1,22 @@
+var mj = require('mongojs');
+// var db = mj('mongodb://apol:jenglot12345@localhost/jap')
+// var db = mj('mongodb://siapDBowner:jenglot12345@103.247.10.160/siap')
+// var db = mj('mongodb://siapApp:jenglot12345@103.247.10.160/siap')
+// var db = mj('siap')
+var db_remote = mj('mongodb://siapApp:!Siap_V3_siapApp@10.10.1.117:9791/siap?authSource=siap');
+// var db = mj('mongodb://cpdDbAdmin:jenglot12345@localhost/cpd');
+var db = mj('mongodb://cpdOnlineApps:##cpdOnlineApps2021@10.10.1.117:9791/cpd?authSource=cpd')
+
+module.exports.mj = mj;
+module.exports.db = db;
+module.exports.db_remote = db_remote;
+      // module.exports.db_analisa = db_analisa;
+      // module.exports.db_pasing = db_pasing;
+      
+module.exports.callBackHandler = function callBackHandler(req, res, err, docs) {
+    if (err) {
+      res.send(err)
+    }else{
+      res.json(docs)
+      }
+    };

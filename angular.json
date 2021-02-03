@@ -124,5 +124,8 @@
       }
     }
   },
-  "defaultProject": "gakeslab"
+  "defaultProject": "gakeslab",
+  "cli": {
+    "analytics": "c69599c9-b623-473b-86d3-05dfef94984d"
+  }
 }
